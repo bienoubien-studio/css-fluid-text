@@ -1,14 +1,14 @@
 {
   "name": "@bienbien/css-fluid-text",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Css fluid font-size custom properties.",
-  "homepage": "https://github.com/bienoubien-studio/fluid-text#readme",
+  "homepage": "https://github.com/bienoubien-studio/css-fluid-text#readme",
   "bugs": {
-    "url": "https://github.com/bienoubien-studio/fluid-text/issues"
+    "url": "https://github.com/bienoubien-studio/css-fluid-text/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bienoubien-studio/fluid-text.git"
+    "url": "git+https://github.com/bienoubien-studio/css-fluid-text.git"
   },
   "license": "MIT",
   "author": "https://github.com/bienoubien-studio",

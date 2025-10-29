@@ -34,13 +34,13 @@ Each size has three control variables:
 Install the package:
 
 ```bash
-npm install css-fluid-text
+npm install @bienbien/css-fluid-text
 ```
 
 Import in your CSS:
 
 ```css
-@import '@bien-bien/css-fluid-text/dist/index.css';
+@import '@bienbien/css-fluid-text/dist/index.css';
 ```
 
 Override defaults as needed:

@@ -26,10 +26,43 @@
 :root {
     /* XS fluid variables */
     --xs-local-base: var(--xs-base, 0.625rem);
-    --xs-local-grow: var(--xs-grow, 0.5);
+    --xs-local-grow: var(--xs-grow, 0.25);
     --xs-local-max: var(--xs-max, 1rem);
+    /* SM fluid variables */
+    --sm-local-base: var(--sm-base, 0.7rem);
+    --sm-local-grow: var(--sm-grow, 0.37);
+    --sm-local-max: var(--sm-max, 1.25rem);
+    /* MD fluid variables */
+    --md-local-base: var(--md-base, 0.9rem);
+    --md-local-grow: var(--md-grow, 0.36);
+    --md-local-max: var(--md-max, 1.5rem);
+    /* LG fluid variables */
+    --lg-local-base: var(--lg-base, 1.125rem);
+    --lg-local-grow: var(--lg-grow, 0.5);
+    --lg-local-max: var(--lg-max, 2.5rem);
+    /* XL fluid variables */
+    --xl-local-base: var(--xl-base, 1.5rem);
+    --xl-local-grow: var(--xl-grow, 0.75);
+    --xl-local-max: var(--xl-max, 4rem);
+    /* 2XL fluid variables */
+    --2xl-local-base: var(--2xl-base, 1.75rem);
+    --2xl-local-grow: var(--2xl-grow, 1);
+    --2xl-local-max: var(--2xl-max, 6rem);
+    /* 3XL fluid variables */
+    --3xl-local-base: var(--3xl-base, 2rem);
+    --3xl-local-grow: var(--3xl-grow, 1.25);
+    --3xl-local-max: var(--3xl-max, 8rem);
+    /* 4XL fluid variables */
+    --4xl-local-base: var(--4xl-base, 2.25rem);
+    --4xl-local-grow: var(--4xl-grow, 1.5);
+    --4xl-local-max: var(--4xl-max, 10rem);
+    /* 5XL fluid variables */
+    --5xl-local-base: var(--5xl-base, 2.75rem);
+    --5xl-local-grow: var(--5xl-grow, 2);
+    --5xl-local-max: var(--5xl-max, 16rem);
+
     --xs-fluid: calc(
-        var(--xs-local-grow) * 0.00001 *
+        var(--xs-local-grow) * var(--xs-local-grow) * 0.00001 *
             calc(1px * var(--px-width) * var(--px-width))
     );
     --text-fluid-xs: clamp(
@@ -38,12 +71,8 @@
         var(--xs-local-max)
     );
 
-    /* SM fluid variables */
-    --sm-local-base: var(--sm-base, 0.7rem);
-    --sm-local-grow: var(--sm-grow, 0.5);
-    --sm-local-max: var(--sm-max, 1.25rem);
     --sm-fluid: calc(
-        var(--sm-local-grow) * 0.00001 *
+        var(--sm-local-grow) * var(--sm-local-grow) * 0.00001 *
             calc(1px * var(--px-width) * var(--px-width))
     );
     --text-fluid-sm: clamp(
@@ -52,12 +81,8 @@
         var(--sm-local-max)
     );
 
-    /* MD fluid variables */
-    --md-local-base: var(--md-base, 0.9rem);
-    --md-local-grow: var(--md-grow, 0.6);
-    --md-local-max: var(--md-max, 1.5rem);
     --md-fluid: calc(
-        var(--md-local-grow) * 0.00001 *
+        var(--md-local-grow) * var(--md-local-grow) * 0.00001 *
             calc(1px * var(--px-width) * var(--px-width))
     );
     --text-fluid-md: clamp(
@@ -66,12 +91,8 @@
         var(--md-local-max)
     );
 
-    /* LG fluid variables */
-    --lg-local-base: var(--lg-base, 1.25rem);
-    --lg-local-grow: var(--lg-grow, 0.8);
-    --lg-local-max: var(--lg-max, 2.5rem);
     --lg-fluid: calc(
-        var(--lg-local-grow) * 0.00001 *
+        var(--lg-local-grow) * var(--lg-local-grow) * 0.00001 *
             calc(1px * var(--px-width) * var(--px-width))
     );
     --text-fluid-lg: clamp(
@@ -80,12 +101,8 @@
         var(--lg-local-max)
     );
 
-    /* XL fluid variables */
-    --xl-local-base: var(--xl-base, 1.5rem);
-    --xl-local-grow: var(--xl-grow, 1);
-    --xl-local-max: var(--xl-max, 4rem);
     --xl-fluid: calc(
-        var(--xl-local-grow) * 0.00001 *
+        var(--xl-local-grow) * var(--xl-local-grow) * 0.00001 *
             calc(1px * var(--px-width) * var(--px-width))
     );
     --text-fluid-xl: clamp(
@@ -94,12 +111,8 @@
         var(--xl-local-max)
     );
 
-    /* 2XL fluid variables */
-    --2xl-local-base: var(--2xl-base, 1.75rem);
-    --2xl-local-grow: var(--2xl-grow, 1.5);
-    --2xl-local-max: var(--2xl-max, 6rem);
     --2xl-fluid: calc(
-        var(--2xl-local-grow) * 0.00001 *
+        var(--2xl-local-grow) * var(--2xl-local-grow) * 0.00001 *
             calc(1px * var(--px-width) * var(--px-width))
     );
     --text-fluid-2xl: clamp(
@@ -108,12 +121,8 @@
         var(--2xl-local-max)
     );
 
-    /* 3XL fluid variables */
-    --3xl-local-base: var(--3xl-base, 2rem);
-    --3xl-local-grow: var(--3xl-grow, 2);
-    --3xl-local-max: var(--3xl-max, 8rem);
     --3xl-fluid: calc(
-        var(--3xl-local-grow) * 0.00001 *
+        var(--3xl-local-grow) * var(--3xl-local-grow) * 0.00001 *
             calc(1px * var(--px-width) * var(--px-width))
     );
     --text-fluid-3xl: clamp(
@@ -122,17 +131,23 @@
         var(--3xl-local-max)
     );
 
-    /* 4XL fluid variables */
-    --4xl-local-base: var(--4xl-base, 2.25rem);
-    --4xl-local-grow: var(--4xl-grow, 3);
-    --4xl-local-max: var(--4xl-max, 10rem);
     --4xl-fluid: calc(
-        var(--4xl-local-grow) * 0.00001 *
+        var(--4xl-local-grow) * var(--4xl-local-grow) * 0.00001 *
             calc(1px * var(--px-width) * var(--px-width))
     );
     --text-fluid-4xl: clamp(
         var(--4xl-local-base),
         calc(var(--4xl-local-base) + var(--4xl-fluid)),
         var(--4xl-local-max)
+    );
+
+    --5xl-fluid: calc(
+        var(--5xl-local-grow) * var(--5xl-local-grow) * 0.00001 *
+            calc(1px * var(--px-width) * var(--px-width))
+    );
+    --text-fluid-5xl: clamp(
+        var(--5xl-local-base),
+        calc(var(--5xl-local-base) + var(--5xl-fluid)),
+        var(--5xl-local-max)
     );
 }
